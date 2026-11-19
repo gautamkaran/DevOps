@@ -13,7 +13,7 @@ jobs:
   say-hello:
     # Creates an ephemeral GitHub-hosted Ubuntu runner.
     runs-on: ubuntu-latest
-
+     
     # The ephemeral runner executes a series of steps.
     # Hence, we define those steps using 'steps'.
     # The 'run:' keyword specifies the commands to execute.
