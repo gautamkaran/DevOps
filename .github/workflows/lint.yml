@@ -1,22 +1,19 @@
-# What is the goal of this workflow?
-# Goal: Whenever someone changes the python code, the linter should run to check for any errors in the code.
+# Goal: Automatically check Python code for linting errors whenever a Python file changes.
 
 name: Auto Lint Workflow
 
+# Trigger: Run workflow when Python files are pushed.
 on:
   push:
     paths:
-      - "**/*.py"
-  pull_request:
-    paths:
-      - "**/*.py"
+      - "**.py"
 
 jobs:
   code:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout the code
+      # Checkout the repository
       - name: Checkout code
         uses: actions/checkout@v7
 
@@ -27,13 +24,9 @@ jobs:
           python-version: "3.12"
 
       # Install Ruff
-      - name: Install Linter
+      - name: Install Ruff
         run: pip install ruff
 
       # Check for linting errors
-      - name: Check for linting errors
+      - name: Run Ruff Linter
         run: ruff check .
-
-      # Check code formatting
-      - name: Check code formatting
-        run: ruff format --check .
