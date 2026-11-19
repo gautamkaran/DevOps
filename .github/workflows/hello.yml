@@ -1,11 +1,25 @@
 # Workflow
-# Should Have Name
+name: Hello World Workflow
 
-# Job
-# Should be inside the workflow
+# Trigger: Defines when the workflow should run.
+on:
+  workflow_dispatch:
 
-# Steps
-# Should be inside the job
+# Jobs: Defines what the workflow should do.
+# A workflow can contain one or more jobs, hence we use 'jobs'.
+# 'jobs' is an object, so proper indentation is required.
+jobs:
+  # First Job (use proper indentation).
+  say-hello:
+    # Creates an ephemeral GitHub-hosted Ubuntu runner.
+    runs-on: ubuntu-latest
 
-# Actions
-# Should be inside the steps
+    # The ephemeral runner executes a series of steps.
+    # Hence, we define those steps using 'steps'.
+    # The 'run:' keyword specifies the commands to execute.
+    steps:
+      - name: Say Hello World
+        run: |
+          echo "Hello World"
+          echo "Welcome to GitHub Actions"
+          echo "Learning CI/CD"
