@@ -1,17 +1,16 @@
+# React + Vite
 
-# DevOps
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Concepts
+Currently, two official plugins are available:
 
-### 1. Workflow
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-A **GitHub Actions Workflow** is an automated process used to build, test, and deploy applications.
+## React Compiler
 
-To create a GitHub Actions workflow, you need to create a folder named `.github/workflows` in the root directory of your project.
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
+## Expanding the ESLint configuration
 
-### 2. GitHub Actions Marketplace
-
-GitHub Actions Marketplace provides pre-built actions that help automate development workflows, such as building, testing, and deploying applications.
-
-**Explore GitHub Actions Marketplace:** https://github.com/marketplace
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
